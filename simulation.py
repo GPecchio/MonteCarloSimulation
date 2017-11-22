@@ -48,7 +48,8 @@ for r2 in np.arange(startPoint,endPoint,.1):
         y2.append((0.8*r2-4) ** 2 + 2)
 
 plt.ylim([0,9])
-plt.plot(x1,y1,'-',color='blue')
-plt.plot(x2,y2,'-',color='red')
+line1, = plt.plot(x1,y1,'-',color='blue',label='f(x)')
+line2, = plt.plot(x2,y2,'-',color='red',label='g(x)')
 plt.plot(xVal,yVal,marker='o',linestyle='',color='green')
+plt.legend()
 plt.show()
